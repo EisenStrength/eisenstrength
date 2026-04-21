@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eisen Strength — Coming Soon</title>
   <style>
-    /* Hard reset — override anything Jekyll/GitHub injects */
     html, body {
       margin: 0 !important;
       padding: 0 !important;
@@ -15,137 +13,112 @@
       background: #292929 !important;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
     }
-
-```
-/* Kill any Jekyll theme wrapper styles */
-body > * { all: unset; display: revert; }
-
-/* Full-page gradient backdrop — sits behind everything */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: radial-gradient(ellipse at center, #2f2f2f 0%, #292929 50%, #222222 100%);
-}
-
-/* Centre wrapper */
-.wrap {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 100vh !important;
-  padding: 3rem 1.5rem 2.5rem !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-}
-
-/* Logo */
-.logo { width: 100%; max-width: 360px; margin-bottom: 2rem; }
-.logo img { width: 100%; height: auto; display: block; }
-
-/* Heading */
-.heading {
-  font-size: clamp(2rem, 10vw, 4rem);
-  font-weight: 200 !important;
-  color: #e6e5da !important;
-  letter-spacing: -0.02em;
-  margin: 0 0 2.5rem 0 !important;
-  text-align: center;
-  line-height: 1.1;
-}
-
-/* Form */
-.frm {
-  width: 100%;
-  max-width: 420px;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0.9rem;
-}
-
-.frm input {
-  display: block !important;
-  width: 100% !important;
-  padding: 0.85rem 1.1rem !important;
-  background: transparent !important;
-  border: 2px solid #c6baaa !important;
-  border-radius: 8px !important;
-  color: #e6e5da !important;
-  font-size: 1rem !important;
-  font-family: inherit !important;
-  outline: none !important;
-  box-shadow: none !important;
-  -webkit-appearance: none !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-}
-.frm input::placeholder { color: rgba(198,186,170,0.5); }
-.frm input:focus { border-color: #263c29 !important; }
-
-.frm-btn {
-  display: block !important;
-  width: 100% !important;
-  padding: 0.85rem 1.1rem !important;
-  background: #263c29 !important;
-  border: none !important;
-  border-radius: 8px !important;
-  color: #e6e5da !important;
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-  font-family: inherit !important;
-  cursor: pointer !important;
-  -webkit-appearance: none !important;
-  margin: 0.4rem 0 0 0 !important;
-  box-sizing: border-box !important;
-  transition: opacity 0.25s;
-}
-.frm-btn:hover:not(:disabled) { opacity: 0.82; }
-.frm-btn:disabled { opacity: 0.55; cursor: default; }
-
-/* Messages */
-.msg-ok, .msg-err {
-  display: none !important;
-  text-align: center !important;
-  font-size: 0.8rem !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
-  margin-top: 0.75rem !important;
-}
-.msg-ok  { color: #4a7a50 !important; }
-.msg-err { color: #c06060 !important; }
-.msg-ok.show, .msg-err.show { display: block !important; }
-
-/* Instagram */
-.social { margin-top: 2rem; }
-.social a {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.45rem;
-  text-decoration: none !important;
-  color: rgba(198,186,170,0.6) !important;
-  font-size: 0.75rem !important;
-  letter-spacing: 0.15em !important;
-  text-transform: uppercase !important;
-  transition: color 0.2s, opacity 0.2s;
-}
-.social a:hover { color: #e6e5da !important; }
-.social svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
-
-/* Animations */
-@keyframes up { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
-.logo    { animation: up 0.55s ease both 0.05s; }
-.heading { animation: up 0.55s ease both 0.2s; }
-.frm     { animation: up 0.55s ease both 0.35s; }
-.social  { animation: up 0.55s ease both 0.55s; }
-
-@media (max-width: 480px) {
-  .wrap { padding: 2rem 1.25rem; }
-  .logo { max-width: 240px; }
-}
-```
-
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(ellipse at center, #2f2f2f 0%, #292929 50%, #222222 100%);
+    }
+    .wrap {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-height: 100vh !important;
+      padding: 3rem 1.5rem 2.5rem !important;
+      box-sizing: border-box !important;
+      margin: 0 !important;
+    }
+    .logo { width: 100%; max-width: 360px; margin-bottom: 2rem; }
+    .logo img { width: 100%; height: auto; display: block; }
+    .heading {
+      font-size: clamp(2rem, 10vw, 4rem);
+      font-weight: 200 !important;
+      color: #e6e5da !important;
+      letter-spacing: -0.02em;
+      margin: 0 0 2.5rem 0 !important;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .frm {
+      width: 100%;
+      max-width: 420px;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.9rem;
+    }
+    .frm input {
+      display: block !important;
+      width: 100% !important;
+      padding: 0.85rem 1.1rem !important;
+      background: transparent !important;
+      border: 2px solid #c6baaa !important;
+      border-radius: 8px !important;
+      color: #e6e5da !important;
+      font-size: 1rem !important;
+      font-family: inherit !important;
+      outline: none !important;
+      box-shadow: none !important;
+      -webkit-appearance: none !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
+    .frm input::placeholder { color: rgba(198,186,170,0.5); }
+    .frm input:focus { border-color: #263c29 !important; }
+    .frm-btn {
+      display: block !important;
+      width: 100% !important;
+      padding: 0.85rem 1.1rem !important;
+      background: #263c29 !important;
+      border: none !important;
+      border-radius: 8px !important;
+      color: #e6e5da !important;
+      font-size: 1rem !important;
+      font-weight: 600 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      -webkit-appearance: none !important;
+      margin: 0.4rem 0 0 0 !important;
+      box-sizing: border-box !important;
+      transition: opacity 0.25s;
+    }
+    .frm-btn:hover:not([disabled]) { opacity: 0.82; }
+    .frm-btn[disabled] { opacity: 0.55; cursor: default; }
+    .msg {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.75rem;
+      min-height: 1.2em;
+      color: transparent;
+    }
+    .social { margin-top: 2rem; }
+    .social a {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.45rem;
+      text-decoration: none !important;
+      color: rgba(198,186,170,0.6) !important;
+      font-size: 0.75rem !important;
+      letter-spacing: 0.15em !important;
+      text-transform: uppercase !important;
+      transition: color 0.2s;
+    }
+    .social a:hover { color: #e6e5da !important; }
+    .social svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+    @keyframes up { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+    .logo    { animation: up 0.55s ease both 0.05s; }
+    .heading { animation: up 0.55s ease both 0.2s; }
+    .frm     { animation: up 0.55s ease both 0.35s; }
+    .social  { animation: up 0.55s ease both 0.55s; }
+    @media (max-width: 480px) {
+      .wrap { padding: 2rem 1.25rem; }
+      .logo { max-width: 240px; }
+    }
   </style>
 </head>
 <body>
@@ -157,15 +130,15 @@ body::before {
 
   <h1 class="heading">Coming Soon</h1>
 
-  <form class="frm" id="frm">
+  <!-- action="#" prevents page navigation on submit -->
+  <form class="frm" id="frm" action="#" method="post" onsubmit="submitForm(event)">
     <input type="text"  id="f-name"  placeholder="Name"  autocomplete="name" />
     <input type="email" id="f-email" placeholder="Email" autocomplete="email" required />
     <input type="tel"   id="f-phone" placeholder="Phone" autocomplete="tel" />
     <button class="frm-btn" type="submit" id="frm-btn">Get Notified</button>
   </form>
 
-  <p class="msg-ok"  id="msg-ok">&#10003;&nbsp; You're on the list!</p>
-  <p class="msg-err" id="msg-err">Something went wrong &mdash; please try again.</p>
+  <p class="msg" id="msg"></p>
 
   <div class="social">
     <a href="https://www.instagram.com/eisenstrength" target="_blank" rel="noopener">
@@ -175,42 +148,64 @@ body::before {
   </div>
 
 </div>
+
 <script>
-  var ML_KEY   = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNzY1NjZlMjg2MzY4N2EyZmFjMmNhMjdjODBjY2U4Y2NlYTZhZDMxMTQ4ODJjOGQ0NTk0NDYzOTgzYjAxZjRjYWU2N2QwNmQwNmVhYTUyMzgiLCJpYXQiOjE3NzY3NDMzNDIuMjQ2NTQ1LCJuYmYiOjE3NzY3NDMzNDIuMjQ2NTQ4LCJleHAiOjQ5MzI0MTY5NDIuMjQxOTU3LCJzdWIiOiIyMzAwOTAxIiwic2NvcGVzIjpbXX0.tal-gWfR5J9HnUNTl8t8XaFryGEtXTzeYtVSRsxXSITHq4FmXxutYXqILXU46ME5E12HGCioxWtDAhJ2cIv76_pTsh3SbpmpttWhhtCGtZ9hAi7rnuA-Z9TtdHYAFfyWwjP5XVyHq2LGpf-2OwEDaAgy8WfSHAvvmQ1xvUPhPM2dCxtTctNrrNIcAITUfF9_PhSrmu6VYOm7XiStfMyFHIO2UrT-TFtPhwAUZvONuDsUNu5OxTvAoX1trihTT0J3v23C8ZAqn-gLCo7au7fvuyPDf9oyMrrDSLguI6Vl6qoo2BnXw9Sz0nDxgUi0dSQxEXiS8MtKGLNqXjlOYlHrETCU8xu_85MizxOy7caYb5XxBfKWCk5SkmYh_KVJcER8n7R--SBu4wAK0BhvtTc1_EYIDDAxgWd3_2DGLiSNrxmqjYZ2bQx0G_eMF8UEnUaOliI69FLoNuWA8CVq0M1g2SrvbvRa-9BahPCF4-6Y4E1iunfzceoW-yQbGXSgfj5ydvJtfs1MFI7mKjIYZ3R15l7eDH1AGg9EBLpbaUSJ_H2SxV-EXLxk9R23bZUIU_pSxXfeOs2YP9Ensujoz2u-3lxYo536cvRbU3cx-XQLUIn3ExZOgQdOc6whEFF_TQssvP1c6QFObzEBIS-roemL0FLTBOM3v3B-3hSfS6XXJ_g';
-  var ML_GROUP = '185328969083520451';
+// Inline function called via onsubmit — avoids addEventListener timing issues
+function submitForm(e) {
+  e.preventDefault();
+  e.stopPropagation();
 
-document.getElementById(‘frm’).addEventListener(‘submit’, function(e) {
-e.preventDefault();
-var btn  = document.getElementById(‘frm-btn’);
-var ok   = document.getElementById(‘msg-ok’);
-var err  = document.getElementById(‘msg-err’);
-var name = document.getElementById(‘f-name’).value.trim();
-var mail = document.getElementById(‘f-email’).value.trim();
-var tel  = document.getElementById(‘f-phone’).value.trim();
-if (!mail) return;
-btn.textContent = ‘Sending…’;
-btn.disabled = true;
-ok.classList.remove(‘show’);
-err.classList.remove(‘show’);
-var parts = name.split(’ ‘);
-var body = { email: mail, fields: { name: parts[0]||’’, last_name: parts.slice(1).join(’ ‘)||’’ }, groups: [ML_GROUP] };
-if (tel) body.fields.phone = tel;
-fetch(‘https://connect.mailerlite.com/api/subscribers’, {
-method: ‘POST’,
-headers: { ‘Content-Type’: ‘application/json’, ‘Accept’: ‘application/json’, ‘Authorization’: ’Bearer ’ + ML_KEY },
-body: JSON.stringify(body)
-}).then(function(r) {
-if (r.ok || r.status===200 || r.status===201) {
-ok.classList.add(‘show’);
-document.getElementById(‘frm’).reset();
-} else { throw 0; }
-}).catch(function() {
-err.classList.add(‘show’);
-btn.textContent = ‘Get Notified’;
-btn.disabled = false;
-});
-});
+  var btn  = document.getElementById('frm-btn');
+  var msg  = document.getElementById('msg');
+  var name = document.getElementById('f-name').value.trim();
+  var mail = document.getElementById('f-email').value.trim();
+  var tel  = document.getElementById('f-phone').value.trim();
+
+  if (!mail) return false;
+
+  btn.textContent = 'Sending...';
+  btn.setAttribute('disabled', 'disabled');
+  msg.style.color = 'transparent';
+  msg.textContent = '';
+
+  var parts = name.split(' ');
+  var payload = {
+    email: mail,
+    fields: {
+      name: parts[0] || '',
+      last_name: parts.slice(1).join(' ') || ''
+    },
+    groups: ['185328969083520451']
+  };
+  if (tel) payload.fields.phone = tel;
+
+  fetch('https://connect.mailerlite.com/api/subscribers', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNzY1NjZlMjg2MzY4N2EyZmFjMmNhMjdjODBjY2U4Y2NlYTZhZDMxMTQ4ODJjOGQ0NTk0NDYzOTgzYjAxZjRjYWU2N2QwNmQwNmVhYTUyMzgiLCJpYXQiOjE3NzY3NDMzNDIuMjQ2NTQ1LCJuYmYiOjE3NzY3NDMzNDIuMjQ2NTQ4LCJleHAiOjQ5MzI0MTY5NDIuMjQxOTU3LCJzdWIiOiIyMzAwOTAxIiwic2NvcGVzIjpbXX0.tal-gWfR5J9HnUNTl8t8XaFryGEtXTzeYtVSRsxXSITHq4FmXxutYXqILXU46ME5E12HGCioxWtDAhJ2cIv76_pTsh3SbpmpttWhhtCGtZ9hAi7rnuA-Z9TtdHYAFfyWwjP5XVyHq2LGpf-2OwEDaAgy8WfSHAvvmQ1xvUPhPM2dCxtTctNrrNIcAITUfF9_PhSrmu6VYOm7XiStfMyFHIO2UrT-TFtPhwAUZvONuDsUNu5OxTvAoX1trihTT0J3v23C8ZAqn-gLCo7au7fvuyPDf9oyMrrDSLguI6Vl6qoo2BnXw9Sz0nDxgUi0dSQxEXiS8MtKGLNqXjlOYlHrETCU8xu_85MizxOy7caYb5XxBfKWCk5SkmYh_KVJcER8n7R--SBu4wAK0BhvtTc1_EYIDDAxgWd3_2DGLiSNrxmqjYZ2bQx0G_eMF8UEnUaOliI69FLoNuWA8CVq0M1g2SrvbvRa-9BahPCF4-6Y4E1iunfzceoW-yQbGXSgfj5ydvJtfs1MFI7mKjIYZ3R15l7eDH1AGg9EBLpbaUSJ_H2SxV-EXLxk9R23bZUIU_pSxXfeOs2YP9Ensujoz2u-3lxYo536cvRbU3cx-XQLUIn3ExZOgQdOc6whEFF_TQssvP1c6QFObzEBIS-roemL0FLTBOM3v3B-3hSfS6XXJ_g'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(function(r) {
+    if (r.status === 200 || r.status === 201) {
+      msg.style.color = '#4a7a50';
+      msg.textContent = '\u2713  You\'re on the list!';
+      document.getElementById('frm').reset();
+    } else {
+      throw new Error(r.status);
+    }
+  })
+  .catch(function() {
+    msg.style.color = '#c06060';
+    msg.textContent = 'Something went wrong \u2014 please try again.';
+    btn.textContent = 'Get Notified';
+    btn.removeAttribute('disabled');
+  });
+
+  return false;
+}
 </script>
-
 </body>
 </html>
